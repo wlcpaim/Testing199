@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-[#121212] text-[#F5F5F5] font-sans antialiased;
+    @apply bg-[#0D0D0E] text-[#F5F5F5] font-sans antialiased selection:bg-gold selection:text-black;
   }
 }
 
@@ -16,21 +16,35 @@
     min-height: 44px;
     min-width: 44px;
   }
+  .glass-card {
+    background: rgba(24, 24, 27, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card-hover:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+    transform: translateY(-2px);
+  }
 }
 
 button, a, input, select {
   min-height: 44px;
 }
 
-/* Custom scrollbar for dark theme */
+/* Custom scrollbar for dark luxury theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #121212;
+  background: #0D0D0E;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2A2A2A;
+  background: #27272A;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
